@@ -21,9 +21,9 @@ function dateSample(n) {
   const modernActivity = 15; 
   const halfLifePeriod = 5370;
   let k = 0.693/halfLifePeriod;
-  let t = (Math.log(modernActivity/n))/k;
   if (typeof (n) !== 'string') {return false}
-  else if (0<=n<=15) {return (Math.ceil(t))} 
+  let t = (Math.log(modernActivity/n))/k;
+  if (0<=n<=15) {return (Math.ceil(t))} 
   else return false
 }
 module.exports = {
